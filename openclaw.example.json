@@ -34,7 +34,7 @@
         "anthropic/claude-haiku-4-5": {}
       },
       "model": {
-        "primary": "anthropic/claude-sonnet-4-6"
+        "primary": "anthropic/claude-opus-4-7"
       },
       "heartbeat": {
         "target": "slack",
