@@ -13,6 +13,7 @@
 !/plugins/
 !/plugin-skills/
 !/memory/
+!/cron/
 
 # Inside workspace/: drop runtime sub-paths and the nested git repo
 /workspace/.openclaw/
@@ -29,6 +30,10 @@
 /memory/*.sqlite
 /memory/*.sqlite-shm
 /memory/*.sqlite-wal
+
+# Inside cron/: only track job definitions (state and runs stay out)
+/cron/*
+!/cron/jobs.json
 
 # OS junk anywhere
 **/.DS_Store
