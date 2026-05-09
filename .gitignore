@@ -1,0 +1,34 @@
+# Whitelist-style: ignore everything by default, then explicitly track.
+# Goal: track only "files that are (or may be) modified from defaults".
+# Auth tokens, session histories, runtime state, and caches stay out.
+
+/*
+
+# Allowed at the repo root
+!/.gitignore
+!/.gitattributes
+!/README.md
+!/openclaw.example.json
+!/workspace/
+!/plugins/
+!/plugin-skills/
+!/memory/
+
+# Inside workspace/: drop runtime sub-paths and the nested git repo
+/workspace/.openclaw/
+/workspace/.playwright-cli/
+/workspace/.trinity/
+/workspace/state/
+/workspace/claude/
+
+# Inside plugins/: only track installs.json (the rest is runtime state)
+/plugins/*
+!/plugins/installs.json
+
+# Inside memory/: skip the regeneratable embedding cache
+/memory/*.sqlite
+/memory/*.sqlite-shm
+/memory/*.sqlite-wal
+
+# OS junk anywhere
+**/.DS_Store
