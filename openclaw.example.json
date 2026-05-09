@@ -41,7 +41,7 @@
         "to": "channel:C******",
         "isolatedSession": true,
         "skipWhenBusy": true,
-        "model": "anthropic/claude-haiku-4-5"
+        "model": "anthropic/claude-sonnet-4-6"
       }
     }
   },
