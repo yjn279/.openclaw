@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "jobs": [
+    {
+      "id": "aea9575d-ff4e-49d5-ac7c-6874f83a5eb0",
+      "name": "hourly-maintenance",
+      "enabled": true,
+      "createdAtMs": 1778331436362,
+      "schedule": {
+        "kind": "every",
+        "everyMs": 3600000,
+        "anchorMs": 1778331436362
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "openclaw tasks maintenance --apply を実行して"
+      },
+      "delivery": {
+        "mode": "none",
+        "channel": "last"
+      },
+      "state": {}
+    }
+  ]
+}
