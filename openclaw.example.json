@@ -55,6 +55,9 @@
         "provider": "ollama",
         "enabled": true
       }
+    },
+    "sessions": {
+      "visibility": "agent"
     }
   },
   "auth": {
